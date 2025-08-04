@@ -1,0 +1,242 @@
+{
+    "nested": {
+      "auth": {
+        "nested": {
+          "AuthService": {
+            "methods": {
+              "PlayerLoginWithPassword": {
+                "requestType": "PlayerLoginWithPasswordReq",
+                "responseType": "PlayerLoginWithPasswordRes"
+              }
+            }
+          },
+          "PlayerLoginWithPasswordReq": {
+            "fields": {
+              "phone": {
+                "type": "string",
+                "id": 1
+              },
+              "password": {
+                "type": "string",
+                "id": 2
+              },
+              "platformId": {
+                "type": "string",
+                "id": 3
+              },
+              "sourceUrl": {
+                "type": "string",
+                "id": 4
+              },
+              "clientDomain": {
+                "type": "string",
+                "id": 5
+              },
+              "eId": {
+                "type": "string",
+                "id": 6
+              },
+              "partnerId": {
+                "type": "string",
+                "id": 7
+              }
+            }
+          },
+          "PlayerLoginWithPasswordRes": {
+            "fields": {
+              "baseResponse": {
+                "type": "common.BaseResponse",
+                "id": 1
+              },
+              "token": {
+                "type": "string",
+                "id": 2
+              }
+            }
+          }
+        }
+      },
+      "common": {
+        "nested": {
+          "StatusCode": {
+            "values": {
+              "STATUS_UNSPECIFIED": 0,
+              "STATUS_SUCCESS": 200,
+              "STATUS_UNAUTHORIZED": 401,
+              "STATUS_FORBIDDEN": 403,
+              "STATUS_NOT_FOUND": 404,
+              "STATUS_INTERNAL_ERROR": 500,
+              "STATUS_ILLEGAL_ARGS": 550,
+              "STATUS_ALREADY_EXISTS": 409,
+              "STATUS_AML_TRIGGERED": 601,
+              "STATUS_AML_NOT_TRIGGERED": 602,
+              "DUPLICATE_ID": 1201,
+              "HASH_CODE_ERROR": 1202,
+              "INVALID_DATE_RANGE": 1203,
+              "INVALID_OR_MISSING_PARAM": 1204,
+              "INVALID_DATE_FORMAT": 1205,
+              "COMMON_ERROR": 1400,
+              "DB_ERROR": 1500,
+              "INVALID_API_USER": 1420,
+              "INVALID_SIGNATURE": 1484,
+              "FAILED_LINK_FACEBOOK": 1483,
+              "INVALID_USER_PASSWORD": 1401,
+              "INVALID_CAPTCHA": 1402,
+              "GENERATE_VALIDATION_CODE_ERROR": 1403,
+              "USERNAME_ALREADY_EXIST": 1404,
+              "INVALID_PARAM": 1405,
+              "INVALID_PHONE_NUMBER": 1406,
+              "INVALID_OLD_PASSWORD": 1407,
+              "DATABASE_CONNECTION_FAILURE": 1408,
+              "PERMISSION_DENIED": 1409,
+              "SEARCH_OUT_OF_RANGE": 1410,
+              "SESSION_EXPIRED": 1411,
+              "INVALID_PROPOSAL": 1412,
+              "PAYMENT_NOT_AVAILABLE": 1413,
+              "PLAYER_NOT_ENOUGH_CREDIT": 1415,
+              "PLAYER_CREDIT_BALANCE_NOT_ENOUGH": 1416,
+              "PLAYER_INVALID_PAYMENT_INFO": 1417,
+              "PLAYER_NO_PERMISSION": 1418,
+              "PLAYER_PENDING_PROPOSAL": 1419,
+              "PLAYER_TOP_UP_FAIL": 1426,
+              "REWARD_EVENT_INVALID": 1421,
+              "PLAYER_NOT_VALID_FOR_REWARD": 1422,
+              "PLAYER_APPLY_REWARD_FAIL": 1423,
+              "PLAYER_HAS_REWARD_TASK": 1424,
+              "CP_NOT_AVAILABLE": 1425,
+              "PLAYER_REWARD_INFO": 1427,
+              "PLAYER_TRANSFER_OUT_ERROR": 1428,
+              "PLAYER_TRANSFER_IN_ERROR": 1429,
+              "PLAYER_IS_FORBIDDEN": 1430,
+              "DATA_INVALID": 1431,
+              "PLAYER_NAME_INVALID": 1432,
+              "PARTNER_NAME_INVALID": 1433,
+              "VALIDATION_CODE_INVALID": 1434,
+              "VALIDATION_CODE_EXPIRED": 1435,
+              "PLAYER_PENDING_REWARD_PROPOSAL": 1436,
+              "INVALID_REFERRAL": 1437,
+              "INVALID_PLATFORM": 1438,
+              "FAILED_UPDATE_REWARD_TASK": 1439,
+              "NO_USER_FOUND": 1440,
+              "USERNAME_LENGTH_INCORRECT": 1441,
+              "PLAYER_REALNAME_EXIST": 1442,
+              "PLAYER_REALNAME_MUST_BE_CHINESE": 1443,
+              "FAILED_PROMO_CODE_CONDITION": 1444,
+              "FAILED_LIMITED_OFFER_CONDITION": 1445,
+              "NO_PROMO_CODE_MATCH": 1446,
+              "TEST_GAME_REQUIRE_LOGIN": 1447,
+              "PLAYER_IS_CANCELLED": 1448,
+              "PLAYER_NOT_MINTOPUP": 1450,
+              "NO_REACH_TOPUP": 1451,
+              "NO_REACH_CONSUMPTION": 1452,
+              "NO_REACH_TOPUP_CONSUMPTION": 1453,
+              "PHONENUMBER_ALREADY_EXIST": 1454,
+              "ABNORMAL_CREDIT_DEDUCTION": 1455,
+              "PLAYER_CONVERT_REWARD_POINTS_FAIL": 1456,
+              "VALIDATION_CODE_EXCEED_ATTEMPT": 1457,
+              "PLAYER_NOT_ENOUGH_REWARD_POINTS": 1458,
+              "GROUP_REWARD_NOT_ALLOWED": 1459,
+              "SMS_RETRY_FAILS_EXCEED": 1460,
+              "NOT_ENOUGH_CONSUMPTION": 1461,
+              "REALNAME_ALREADY_EXIST": 1462,
+              "REWARD_POINTS_CONVERT_FAIL": 1465,
+              "CONCURRENT_DETECTED": 1466,
+              "PROMO_METHOD_NOT_FOUND": 1467,
+              "CS_OFFICER_NOT_FOUND": 1468,
+              "REMARK_NOT_FOUND": 1469,
+              "EXTERNAL_API_FAILURE": 1470,
+              "INVALID_OLD_PHONENUMBER": 1471,
+              "OLD_PHONE_NUMBER_REQUIRED": 1472,
+              "SPENDING_TIMES_REQUIRED": 1473,
+              "BLACKLIST_IP": 1474,
+              "CONFIRMATION_TO_COMPLETE_ACTIVITY": 1475,
+              "INTERVAL_REWARD_CAPPED": 1476,
+              "DEVICE_ID_ERROR": 1477,
+              "NO_BIRTHDAY": 1478,
+              "PARTNER_NOT_FOUND": 1479,
+              "PARTNER_RATE_INAPPROPRIATE": 1480,
+              "DISABLE_PLATFORM_LOGIN": 1482,
+              "LOGIN_CONDITION_NOT_MATCHED": 1487,
+              "INVALID_GLIFE_ACCOUNT": 1489,
+              "GLIFE_COMMON_ERROR": 1490,
+              "INVALID_GCASH_ACCOUNT": 1492,
+              "INVALID_REFRESH_TOKEN": 1502,
+              "INVALID_AUTH_CODE": 1503,
+              "TOKEN_EXPIRED": 1493,
+              "INVALID_MAYA_ACCOUNT": 1494,
+              "NOT_GLIFE_REGISTERED_USER": 1491,
+              "PLAYER_NEED_BANK_INFORMATION": 4231,
+              "PLAYER_NEED_PHONE_NUMBER": 4232,
+              "PLAYER_NEED_PHONENUMBER_AND_BANK": 4233,
+              "CANT_FIND_DEPOSIT_RECORD": 4234,
+              "TOPUP_RECORD_HAS_BEEN_USED": 4235,
+              "NO_FULFILL_DEPOSIT_CONDITION": 4236,
+              "NO_FULFILL_BETTING_CONDITION": 4237,
+              "PLAYER_NEED_EMAIL": 4238,
+              "INVALID_2_STEPS_VERIFICATION": 1485,
+              "INVALID_2_STEPS_VERIFICATION_CODE": 1486,
+              "USER_INFO_INCOMPLETE": 1488,
+              "GCASH_ACCOUNT_GCASHLIMIT": 1495,
+              "INVALID_MAYA_APP_ACCOUNT": 1496,
+              "INVALID_MAYA_APP_PROFILE": 1497,
+              "FAILED_TO_REFRESH_MAYA_APP_TOKEN": 1498,
+              "PLAYER_BELOW_21_AGE": 1499,
+              "REGENERATING_MINUTE_SUMMARY": 4999,
+              "REGENERATING_HOUR_SUMMARY": 4998,
+              "FUNCTION_IS_DISABLED": 1501,
+              "INVALID_ACCOUNT": 1504,
+              "PARTNER_NOT_ENOUGH_CREDIT": 1505,
+              "MAYA_ACCOUNT_MAYALIMIT": 1506,
+              "INVALID_OTP": 1509,
+              "MAX_OTP_ATTEMTPS": 1510,
+              "INVALID_OLD_EMAIL": 1511,
+              "INVALID_PAYMENT_SERVICE_GATEWAY": 1507,
+              "CONSUMPTION_ORDERNO_ERROR": 1508,
+              "API_REQUEST_FREQUENTLY": 1555,
+              "INVALID_AMOUNT": 1701,
+              "GLIFE_DEPOSIT_MAINTENANCE": 1702,
+              "GLIFE_WITHDRAW_MAINTENANCE": 1703,
+              "GLIFE_BANKTYPE_MAINTENANCE": 1704,
+              "INVALID_CONTENT_PROVIDER": 1705,
+              "OPERATION_FAIL": 1706,
+              "INVALID_DATA": 1707,
+              "DOCUMENT_NOT_FOUND": 1708,
+              "CONSUMPTION_ORDERNO_NOT_FOUND": 1709,
+              "CONSUMPTION_UPDATE_NOT_SUCCESS": 1710,
+              "INVALID_UPDATE_CONSUMPTION_PARAM": 1711,
+              "EXTERNAL_API_TIMEOUT": 1712,
+              "PARTNER_IS_FORBIDDEN": 1713,
+              "PARTNER_NO_PERMISSION": 1714,
+              "PROVIDER_GROUP_IS_OFF": 1715,
+              "EXTERNAL_API_ERROR": 1481,
+              "USER_NO_TRANSFER_RECORD": 1716,
+              "GAME_NOT_AVAILABLE": 1717,
+              "HEADER_SIGN_ERROR": 1600,
+              "UNKNOWN_APIKEY": 1601,
+              "REQUEST_EXPIRED": 1603,
+              "INCORRECT_SIGNATURE": 1604,
+              "AUDIT_APPROVAL_FAILED": 1605,
+              "NO_MERGE_ACCOUNT_FOUND": 1800,
+              "MERGE_PLAYER_INVALID_TARGET_PLAYER": 1801,
+              "MERGING_IS_PROCESSING": 1802,
+              "MERGE_ACCOUNT_ATTEMPT_LIMIT_REACHED": 1803,
+              "INVOLVED_PLAYER_HAS_PENDING_PROPOSAL": 1804,
+              "PROCESS_MERGE_ACCOUNT_BEFORE": 1805
+            }
+          },
+          "BaseResponse": {
+            "fields": {
+              "status": {
+                "type": "StatusCode",
+                "id": 1
+              },
+              "message": {
+                "type": "string",
+                "id": 2
+              }
+            }
+          }
+        }
+      }
+    }
+  }

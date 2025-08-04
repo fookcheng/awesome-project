@@ -1,0 +1,77 @@
+{
+  "nested": {
+    "CMS": {
+      "nested": {
+        "LanguageCode": {
+          "values": {
+            "UNSPECIFIED": 0,
+            "EN": 1,
+            "PH": 2,
+            "KR": 3
+          }
+        },
+        "StatusCode": {
+          "values": {
+            "STATUS_UNSPECIFIED": 0,
+            "STATUS_SUCCESS": 1,
+            "STATUS_ERROR": 2
+          }
+        },
+        "BaseResponse": {
+          "fields": {
+            "status": {
+              "type": "StatusCode",
+              "id": 1
+            },
+            "message": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "PageResourceReq": {
+          "fields": {
+            "resourceId": {
+              "type": "string",
+              "id": 1
+            },
+            "languageCode": {
+              "type": "LanguageCode",
+              "id": 2
+            },
+            "eId": {
+              "type": "string",
+              "id": 3
+            },
+            "partnerId": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "PageResourceRes": {
+          "fields": {
+            "baseResponse": {
+              "type": "BaseResponse",
+              "id": 1
+            },
+            "data": {
+              "type": "ReturnData",
+              "id": 2
+            }
+          },
+          "nested": {
+            "ReturnData": {
+              "fields": {
+                "resourceId": {
+                  "type": "string",
+                  "id": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

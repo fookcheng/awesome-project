@@ -1,0 +1,36 @@
+syntax = "proto3";
+package CMS;
+
+enum LanguageCode {
+  UNSPECIFIED = 0;
+  EN = 1;
+  PH = 2;
+  KR = 3;
+}
+
+enum StatusCode {
+    STATUS_UNSPECIFIED = 0; 
+    STATUS_SUCCESS = 1;
+    STATUS_ERROR = 2;
+}
+
+message BaseResponse {
+    StatusCode status = 1;
+    string message = 2;
+} 
+
+message PageResourceReq {
+  string resourceId = 1;
+  LanguageCode languageCode = 2;
+  string eId = 3;
+  string partnerId = 4;
+}
+
+message PageResourceRes {
+  message ReturnData {
+    string resourceId = 1;
+  }
+
+  BaseResponse baseResponse = 1;
+  ReturnData data = 2;
+}

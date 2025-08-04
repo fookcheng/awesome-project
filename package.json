@@ -10,9 +10,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "@connectrpc/connect": "^1.5.0",
+    "@connectrpc/connect-web": "^1.5.0",
+    "@react-native-community/protobufjs": "^6.7.3-custom",
+    "@react-native/new-app-screen": "0.80.2",
+    "@snsoft/auth-grpc-web": "1.0.0-20250307173720",
+    "axios": "^1.11.0",
+    "buffer": "^6.0.3",
+    "protobufjs": "^7.5.3",
     "react": "19.1.0",
-    "react-native": "0.80.2",
-    "@react-native/new-app-screen": "0.80.2"
+    "react-native": "0.80.2"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
