@@ -13,13 +13,17 @@
     "@connectrpc/connect": "^1.5.0",
     "@connectrpc/connect-web": "^1.5.0",
     "@react-native-community/protobufjs": "^6.7.3-custom",
+    "@react-native-google-signin/google-signin": "^16.0.0",
+    "@react-native-ohos/react-native-inappbrowser-reborn": "^3.7.1-rc.1",
     "@react-native/new-app-screen": "0.80.2",
-    "@snsoft/auth-grpc-json": "1.0.0-20250805101512",
+    "@snsoft/auth-grpc-json": "1.0.0-20251205111420",
+    "@snsoft/CMS-grpc-json": "1.0.0-20251006192054",
     "axios": "^1.11.0",
     "buffer": "^6.0.3",
     "protobufjs": "^7.5.3",
     "react": "19.1.0",
-    "react-native": "0.80.2"
+    "react-native": "^0.80.2",
+    "react-native-inappbrowser-reborn": "^3.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
